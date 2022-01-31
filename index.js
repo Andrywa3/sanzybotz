@@ -146,14 +146,14 @@ const starts = async (kurr = new WAConnection()) => {
 console.log(color('> WITA ','silver'), color(`${wita}`,'mediumseagreen'))
 console.log(color('> WIT ','silver'), color(`${wit}`,'mediumseagreen'))
 console.log(color('> HARI ','silver'), color(`${tampilHari}\n`,'mediumseagreen'))
-	kurr.browserDescription = [ 'Sanzy Botz Asisstan', 'ubuntu', '3.0' ]
+	kurr.browserDescription = [ 'Luffy Botz Asisstan', 'ubuntu', '3.0' ]
 
 	kurr.on('qr', () => {
 	console.log(color('[','white'), color('!','red'), color(']','white'), color('SCAN QR NYA'))
 })
 	kurr.on('credentials-updated', () => {
 		fs.writeFileSync('./session.json', JSON.stringify(kurr.base64EncodedAuthInfo(), null, '\t'))
-		info('2', 'Sanzy Botz Asisstan Loading...')
+		info('2', 'Luffy Botz Asisstan Loading...')
 	})
 	fs.existsSync('./session.json') && kurr.loadAuthInfo('./session.json')
 	kurr.on('connecting', () => {
@@ -302,7 +302,7 @@ kurr.on('group-participants-update', async (anu) => {
 
 				teks = `🌹 Hi @${num.split('@')[0]} 👋\n🌹 Selamat Datang Di Group: ${mdata.subject}\n\n Join Pada Jam: ${time} Waktu Server`
 
-				sendButImage(anu.jid, teks, `SanzyBotz-Assistan`, img,but = [{buttonId:`donasi`, 
+				sendButImage(anu.jid, teks, `LuffyBotz-Assistan`, img,but = [{buttonId:`donasi`, 
 
                buttonText:{displayText: 'WELCOME'},type:1}], options = {contextInfo: {mentionedJid: [num, htod]}})
 
@@ -322,7 +322,7 @@ kurr.on('group-participants-update', async (anu) => {
 
 				img = await getBuffer(ppUrl)
 
-				teks = `Daahh @${num.split('@')[0]}\nSelamat Tinggal Di Group: ${mdata.subject}`
+				teks = `Daahh @${num.split('@')[0]}\nKena mental jangan balik lagi ya: ${mdata.subject}`
 
 				sendButImage(anu.jid, teks, `SanzyBotz-Assistan`, img,but = [{buttonId: `Hello World!`, buttonText: {displayText: `SAYONARA !!`}, type: 1}], options = {contextInfo: {mentionedJid: [num, htod]}})
 
@@ -397,8 +397,8 @@ kurr.on('group-update', async (anu) => {
 	})
     kurr.on('chat-update', async (message) => {
         require('./kurr.js')(kurr, message)
-        ownerNumber = ["6281276698054@s.whatsapp.net","6281276698054@s.whatsapp.net",`${settings.NomorOwner}@s.whatsapp.net`]
-        dtod = "6281276698054@s.whatsapp.net"
+        ownerNumber = ["6285894148101@s.whatsapp.net","6285894148101@s.whatsapp.net",`${settings.NomorOwner}@s.whatsapp.net`]
+        dtod = "6285894148101@s.whatsapp.net"
        otod = `${settings.NomorOwner}@s.whatsapp.net`
     })  
 }
